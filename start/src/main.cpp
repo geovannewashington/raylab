@@ -40,7 +40,7 @@ int main()
     BeginDrawing();
         ClearBackground(BLACK);
         // DrawText(const char *text, int posX, int posY, int fontSize, Color color)
-        DrawText("Move with <WASD> or Vim Keys! <hjkl>", 200, 20, 20, lightYellow);
+        DrawText("Move with <Arrow keys> or Vim Keys! <hjkl>", 180, 20, 20, lightYellow);
         
         // DrawCircle(int centerX, int centerY, float radius, Color color)
         DrawCircle(ballX, ballY, 20, lightYellow);
