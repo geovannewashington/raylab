@@ -29,20 +29,21 @@ int main()
     {
     // Event Handling
     //---------------------------------------------------------------------------------------------
-    if (IsKeyDown(KEY_RIGHT)) ballX += 10;
-    if (IsKeyDown(KEY_LEFT)) ballX -= 10;
-    if (IsKeyDown(KEY_UP)) ballY -= 10;
-    if (IsKeyDown(KEY_DOWN)) ballY += 10;
+
+    if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_L)) ballX += 10;
+    if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_H)) ballX -= 10;
+    if (IsKeyDown(KEY_UP) || IsKeyDown(KEY_K)) ballY -= 10;
+    if (IsKeyDown(KEY_DOWN) || IsKeyDown(KEY_J)) ballY += 10;
 
     // Draw
     //---------------------------------------------------------------------------------------------
     BeginDrawing();
         ClearBackground(BLACK);
         // DrawText(const char *text, int posX, int posY, int fontSize, Color color)
-        // DrawText("Hello Raylib", 350, 400, 80, lightYellow);
+        DrawText("Move with <WASD> or Vim Keys! <hjkl>", 200, 20, 20, lightYellow);
         
         // DrawCircle(int centerX, int centerY, float radius, Color color)
-        DrawCircle(ballX, ballY, 40, lightYellow);
+        DrawCircle(ballX, ballY, 20, lightYellow);
     EndDrawing();
     }
 
